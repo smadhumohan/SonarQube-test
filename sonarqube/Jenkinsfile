@@ -3,7 +3,7 @@ pipeline{
     stages{
        stage('GetCode'){
             steps{
-                git 'https://github.com/smadhumohan/test-nginx.git
+                git 'https://github.com/smadhumohan/test-nginx.git'
             }
          }        
         stage('SonarQube analysis') {

@@ -1,19 +1,11 @@
 pipeline{
     agent any
-    environment {
-        PATH = "$PATH:/usr/local/bin/mvn"
-    }
     stages{
        stage('GetCode'){
             steps{
-                git 'https://github.com/ravdy/java-app.git'
+                git 'https://github.com/smadhumohan/test-nginx.git
             }
          }        
-       stage('Build'){
-            steps{
-                sh 'mvn clean package'
-            }
-         }
         stage('SonarQube analysis') {
 //    def scannerHome = tool 'SonarScanner 4.0';
         steps{
